@@ -17,7 +17,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    dockerImage.run()
+                    dockerImage.run(-p 3000:3000)
                 }
             }
         }
